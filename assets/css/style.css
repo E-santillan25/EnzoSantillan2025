@@ -1,0 +1,474 @@
+/* SELECTOR - PROPIEDAD - VALOR
+SELECTOR (ELEMENTO DE NUESTRO HTML) {PROPIEDAD (ATRIBUTO,POR EJ: COLOR) : VALOR (TIPO DE COLOR)*/
+/* HEADER */
+
+/* SIEMPRE TIENE MAS RELEVANCIA EL QUE TENGA MAS ESPECIFICIDAD  */
+
+/* LAS CLASES SE RECONOCEN CON UN PUNTO (.) */
+
+/* LOS ID SE RECONOCEN CON # */
+
+
+
+/* RESET CSS - Aplica a todos los elementos */
+
+* {
+    margin: 0; /* Elimina márgenes externos - Box Model */
+    padding: 0; /* Elimina rellenos internos - Box Model */
+    box-sizing: border-box;  /* CSS: Hace que padding y border se incluyan en el width/height */
+}
+
+/* ESTILOS GENERALES DEL BODY */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url(https://www.roc21.com/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-12.jpg);
+    color: #fff;
+    line-height: 1.6; /* CSS: Altura de línea para mejor legibilidad */
+}
+
+/* HEADER Y NAVEGACIÓN */ /*FLEXBOX */
+.encabezado {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-iKI3GosSkcRgFJ6E9rtqfIGUsFVnla_mw&s);
+    color: #fff;
+    display: flex; /* Activa flex box */
+    justify-content: space-between; /* FLEXBOX: Distribuye espacio entre elementos */
+    align-items: center; /* FLEXBOX: Centra verticalmente los elementos */
+    padding: 0 20px; /* Box Model: Relleno interno */
+    position: relative; /* CSS: Posicionamiento relativo */
+}
+
+.contenedor-logo img {
+    width: 100px; /* CSS: Ancho de la imagen */
+    height: auto /* CSS: Altura automática para mantener proporción */
+}
+
+.navegacion-principal {
+    display: flex; /* Activa flex box */
+}
+
+.menu-principal {
+    display: flex; /* Activa flex box */
+    list-style: none; /* CSS: Elimina viñetas de lista */
+    gap: 20px;  /* CSS: Espacio entre elementos del menú */
+}
+
+.menu-item {
+    position: relative; /* CSS: Para posicionar submenús relativos a este elemento */
+}
+
+.menu-item > a { 
+    color: #fff; /* Color blanco para los enlaces */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    font-weight: bold; /* CSS: Texto en negrita */
+    padding: 10px 15px; /* Box Model: Relleno interno */
+    display: flex; /* Activa flex box */
+    align-items: center; /* FLEXBOX: Centra verticalmente el contenido */
+    gap: 5px; /* CSS: Espacio entre icono y texto */
+    
+}
+
+.menu-item > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px; /* Redondea las esquinas del fondo al hacer hover */
+}
+
+.submenu {
+    display: none;
+    position: absolute; /* Posiciona el submenú de forma absoluta respecto al menu-item */
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    left: 0; /* Alinea el submenú con el borde izquierdo del elemento padre */
+    background-color: #333;
+    min-width: 200px;  /* Ancho mínimo del submenú */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 100; /* Establece un alto nivel de apilamiento para que aparezca sobre otros elementos */
+    list-style: none;
+    
+}
+
+.submenu li {
+    border-bottom: 1px solid #444;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.submenu a:hover {
+    background-color: #555;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+/* HERO SECTION */
+.titulo {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.titulo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECCIONES GENERALES */
+.titulo-seccion {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* OFERTAS DESTACADAS */
+.contenedor-ofertas {
+    display: flex;
+    justify-content: center; /* FLEXBOX: Centra elementos horizontalmente */
+    gap: 20px; /* CSS: Espacio entre elementos flex */
+    flex-wrap: wrap;  /* FLEXBOX: Permite que los elementos bajen de línea */
+    max-width: 1200px;  /* CSS: Ancho máximo del contenedor */
+    margin: 0 auto; /* Box Model: Centra el contenedor horizontalmente */
+    padding: 20px; /* Box Model: Relleno interno */
+}
+
+.producto {
+    background-color: rgba(9, 255, 0, 0.342);
+    border: 1px solid #000; /* Box Model: Borde */
+    border-radius: 8px;  /* CSS: Esquinas redondeadas */
+    padding: 20px; /* Box Model: Relleno interno */
+    width: 300px; /* Box Model: Ancho del elemento */
+    display: flex; /* FLEXBOX: Activa flex para alineación interna */
+    flex-direction: column; /* FLEXBOX: Dirección vertical de elementos */
+    align-items: center; /* FLEXBOX: Centra horizontalmente */
+    text-align: center; /* CSS: Alineación de texto */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra al hacer hover para efecto de elevación */
+}
+
+.producto h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 1.5rem; /* Tamaño de fuente grande para el precio */
+    font-weight: bold; /* Texto en negrita */
+    color: #000;
+    margin: 10px 0;
+}
+
+.btn-comprar {
+    background-color: #3b0a74;
+    color: white;
+    border: none; /* Elimina el borde predeterminado */
+    padding: 10px 20px; /* Box Model: Relleno interno (arriba/abajo - izquierda/derecha) */
+    border-radius: 4px; /* CSS: Esquinas redondeadas */
+    cursor: pointer; /* CSS: Cambia cursor al pasar sobre botón */
+    transition: background-color 0.3s; 
+    margin-top: 10px;  /* Box Model: Margen superior externo */
+}
+
+.btn-comprar:hover {
+    background-color: #5a1ca3; /* Color de fondo más claro al hacer hover */
+}
+
+.btn-comprar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CATEGORÍAS DE PRODUCTOS */
+.contenedor-categorias {
+    display: flex;
+    flex-wrap: wrap; /* FLEXBOX: Elementos pueden pasar a siguiente línea */
+    justify-content: center; /* FLEXBOX: Centra elementos horizontalmente */
+    gap: 20px; /* CSS: Espacio entre elementos */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.categoria {
+    background-color: rgba(3, 41, 9, 0.342);
+    border: 1px solid #3b0a74;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 20px); /* Ancho del 50% menos 20px para tener en cuenta el gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.categoria a {
+    color: rgb(255, 4, 159);
+    text-decoration: none;
+    font-size: 1.2rem; /* Tamaño de fuente mediano */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.categoria p {
+    margin-bottom: 15px;
+}
+
+.categoria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* Recorta la imagen para cubrir el contenedor */
+    border-radius: 4px;
+}
+
+/* SERVICIOS */
+.contenedor-servicios {
+    display: flex; 
+    justify-content: center; /* FLEXBOX: Centra elementos */
+    gap: 20px;  /* CSS: Espacio entre servicios */
+    flex-wrap: wrap; /* FLEXBOX: Responsive - elementos bajan de línea */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.servicio {
+    background-color: rgba(240, 233, 233, 0.377);
+    border: 1px solid #3b0a74;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.servicio h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.servicio img {
+    width: 100%; /* La imagen ocupa el 100% del ancho */
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para cubrir el contenedor */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* UPGRADE */
+.contenedor-upgrade {
+    display: flex; /* FLEXBOX: Distribuye contenido en fila */
+    justify-content: space-between; /* FLEXBOX: Espacio entre elementos */
+    align-items: center; /* FLEXBOX: Centra verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(3, 41, 9, 0.342);
+    border: 1px solid #3b0a74;
+    border-radius: 8px;
+}
+
+.upgrade-info {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.upgrade-info h3 {
+    margin-bottom: 20px;
+}
+
+.upgrade-info img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.btn-upgrade {
+    display: inline-block;
+    background-color: #3b0a74;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-upgrade:hover {
+    background-color: #5a1ca3;
+}
+
+.upgrade-imagen {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.upgrade-imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* SOBRE NOSOTROS */
+.contenedor-sobre-nosotros {
+    display: flex;  /* FLEXBOX: Dos columnas lado a lado */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 0, 149, 0.342);
+    border: 1px solid #3b0a74;
+    border-radius: 8px;
+}
+
+.info-nosotros {
+    flex: 2; /* Ocupa 2 fracciones del espacio disponible (más espacio que el mapa) */
+    padding: 20px;
+}
+
+.mapa {
+    flex: 1; /* Ocupa 1 fracción del espacio disponible */
+    padding: 20px;
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.mapa img {
+    width: 100%;
+    height: auto; /* Altura automática para mantener proporciones */
+    border-radius: 4px;
+}
+
+.informacion-contacto {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contacto-detalles {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px;
+    margin-top: 15px; /* Margen superior de 15px */
+} 
+
+.contacto-detalles p {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px; /* Relleno interno: 10px arriba/abajo, 15px izquierda/derecha */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+/* FOOTER */
+.pie-pagina {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-iKI3GosSkcRgFJ6E9rtqfIGUsFVnla_mw&s);
+    color: white;
+    padding: 2rem 0; /* Relleno interno: 2rem arriba/abajo, 0 izquierda/derecha */
+}
+
+.contenedor-footer {
+    display: flex; /* FLEXBOX: Distribuye columnas del footer */
+    justify-content: space-around;  /* FLEXBOX: Espacio uniforme alrededor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-footer, .enlaces-footer { 
+    flex: 1; /* Ambos elementos ocupan la misma cantidad de espacio */
+    padding: 0 20px; /* Relleno interno: 0 arriba/abajo, 20px izquierda/derecha */
+}
+
+.enlaces-footer ul { 
+    list-style: none; /* Elimina las viñetas de la lista */
+}
+
+.enlaces-footer li {
+    margin-bottom: 8px; /* Margen inferior de 8px entre items de la lista */
+}
+
+.enlaces-footer a {
+    color: white; /* Color blanco para los enlaces */
+    text-decoration: none; /* Elimina subrayado de enlaces */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.enlaces-footer a:hover { 
+    color: #ccc; /* Color gris claro al hacer hover sobre enlaces */
+}
+
+.derechos {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria superior semi-transparente */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {   /* Estilos que se aplican solo cuando la pantalla tiene máximo 768px de ancho */
+    .encabezado {
+        flex-direction: column;
+        padding: 10px;  /* Reduce el relleno interno a 10px */
+    }
+    
+    .menu-principal {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contenedor-ofertas, .contenedor-categorias, .contenedor-servicios {
+        flex-direction: column; /* Cambia la dirección a columna para estos contenedores */
+        align-items: center;
+    }
+    
+    .producto, .categoria, .servicio {
+        width: 100%;  /* Ocupa el 100% del ancho disponible */
+        max-width: 400px; /* Pero no más de 400px de ancho */
+    }
+    
+    .contenedor-upgrade, .contenedor-sobre-nosotros, .contenedor-footer {
+        flex-direction: column;  /* Cambia la dirección a columna para estos contenedores */
+    }
+    
+    .categoria {
+        width: 100%; /* Las categorías ocupan el 100% del ancho en móviles */
+    }
+}
