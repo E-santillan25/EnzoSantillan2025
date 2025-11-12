@@ -1,72 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <!--Fontawesome-->
-
+    <title>Contacto - CoguiHard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    <header>
-    <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./productos.html">Productos</a></li>
-        <li><a href="./servicios.html">Servicios</a></li>
-        <li><a href="./sobre-nosotros.html">Sobre-nosotros</a></li>
-    </ul>
+    <!-- Header con Bootstrap -->
+    <header class="encabezado">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <section class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <div class="contenedor-logo">
+                        <img src="../assets/img/logo.png" alt="Logo CoguiHard">
+                    </div>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Inicio -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./productos.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./productos.html">Procesadores</a></li>
+                                <li><a class="dropdown-item" href="./productos.html">Placas de video</a></li>
+                                <li><a class="dropdown-item" href="./productos.html">Mothers</a></li>
+                                <li><a class="dropdown-item" href="./productos.html">Periféricos</a></li>
+                            </ul>
+                        </li>
+
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Servicios <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./servicios.html">Mantenimiento</a></li>
+                                <li><a class="dropdown-item" href="./servicios.html">Upgrade</a></li>
+                                <li><a class="dropdown-item" href="./servicios.html">Reparación</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Sobre Nosotros -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+
+                        <!-- Contacto -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
     </header>
 
-    <h1>CONTACTO</h1>
-    <form action="/submit" method="post">
-        <p>Ingresa a tu cuenta</p>
-    <label for="name">Nombre</label>
-    <input type="text" name="" id="name">
-    
-    <label for="password">Contraseña:</label>
-    <input type="password" name="" id="password">
-    <p>¿Olvidaste tu contraseña?</p>
-
-    <select id="asunto" name="asunto">
-        <option value="consulta">Consulta</option>
-        <option value="soporte">Soporte Técnico</option>
-        <option value="ventas">Información de Ventas</option>
-    </select>
-    <label for="mensaje">Mensaje:</label>
-    <textarea name="mensaje" id="mensaje"></textarea>
-    <button type="submit">Enviar</button>
-    
-<p>¿No tenes cuenta? registrate gratis</p>
-
-<div>
-
-    <button type="submit">Crea tu cuenta</button> 
-</div>
-
-</form>
-
-
-    
-    </header>
     <main>
-
-    </main>
-    <footer>
-        <p><strong>Email:</strong> Santillanenzo@gmail.com</p>
-        <p><strong>Teléfono:</strong> +54 011 2345 6790</p>
-        <p><strong>Dirección:</strong> Park Ave 225, Capital Federal</p>
-        <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
-        <section id="footer">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./Productos.html">Productos</a></li>
-            <li><a href="./Servicios.html">Servicios</a></li>
-            <li><a href="./Sobre-nosotros.html">Sobre-nosotros</a></li>
-        </ul>
+        
+        <section class="titulo">
+            <div class="container">
+                <h1>CONTACTO</h1>
+                <p class="subtitulo">¿Necesitas ayuda? Estamos aquí para responder tus consultas</p>
+            </div>
         </section>
+
+        
+        <section class="contacto-contenedor">
+            
+                <section class="formulario-contacto">
+                    <!-- Formulario de Login -->
+                    <div class="formulario-seccion">
+                        <h3>Ingresa a tu cuenta</h3>
+                        <form action="/submit" method="post" class="formulario-estilizado">
+                            <div class="campo-grupo">
+                                <label for="name">Usuario</label>
+                                <input type="text" id="name" name="name" class="campo-input">
+                            </div>
+                            
+                            <div class="campo-grupo">
+                                <label for="password">Contraseña:</label>
+                                <input type="password" id="password" name="password" class="campo-input">
+                            </div>
+                            
+                            <a href="#" >¿Olvidaste tu contraseña?</a>
+
+                            <div class="campo-grupo">
+                                <label for="asunto">Asunto:</label>
+                                <select id="asunto" name="asunto" class="campo-input">
+                                    <option value="consulta">Consulta</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="ventas">Información de Ventas</option>
+                                </select>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="mensaje">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" class="campo-textarea"></textarea>
+                            </div>
+
+                            <button type="submit" >Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                    
+                    <div class="registro-seccion">
+                        <h3>¿No tenés cuenta?</h3>
+                        <p class="registro-texto">Registrate gratis y accedé a beneficios exclusivos</p>
+                        <button type="button" class="btn-registro">Crear Cuenta Gratis</button>
+                    </div>
+                </section>
+            
+        </section>
+
+        <!-- Información de Contacto -->
+        <section class="informacion-contacto">
+            <div class="container">
+                <h3>Información de Contacto</h3>
+                <div class="contacto-detalles">
+                    <p><strong>Email:</strong> Santillanenzo@gmail.com</p>
+                    <p><strong>Teléfono:</strong> +54 011 2345 6790</p>
+                    <p><strong>Dirección:</strong> Park Ave 225, Capital Federal</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="container">
+            <div class="contenedor-footer">
+                <div class="info-footer">
+                    <h4>Contacto</h4>
+                    <p><strong>Email:</strong> Santillanenzo@gmail.com</p>
+                    <p><strong>Teléfono:</strong> +54 011 2345 6790</p>
+                    <p><strong>Dirección:</strong> Park Ave 225, Capital Federal</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
+                </div>
+                <div class="enlaces-footer">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2025 CoguiHard. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

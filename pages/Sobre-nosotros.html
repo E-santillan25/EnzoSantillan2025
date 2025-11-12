@@ -1,39 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre-nosotros</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Sobre Nosotros - CoguiHard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <!-- Header con Bootstrap -->
     <header class="encabezado">
-        <div class="contenedor-logo">
-            <img src="../assets/img/logo.png" alt="Logo CoguiHard">
-        </div>
-        <nav class="navegacion-principal">
-            <ul class="menu-principal">
-                <li class="menu-item"><a href="../index.html">Inicio</a></li>
-                <li class="menu-item">
-                    <a href="./productos.html">Productos <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">Procesadores</a></li>
-                        <li><a href="#">Placas de video</a></li>
-                        <li><a href="#">Mothers</a></li>
-                        <li><a href="#">Periféricos</a></li>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <section class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <div class="contenedor-logo">
+                        <img src="../assets/img/logo.png" alt="Logo CoguiHard">
+                    </div>
+                </a>
+                
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
+                </button>
+                
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Inicio -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./productos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./productos.html">Procesadores</a></li>
+                                <li><a class="dropdown-item" href="./productos.html">Placas de video</a></li>
+                                <li><a class="dropdown-item" href="./productos.html">Mothers</a></li>
+                                <li><a class="dropdown-item" href="./productos.html">Periféricos</a></li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./servicios.html">Mantenimiento</a></li>
+                                <li><a class="dropdown-item" href="./servicios.html">Upgrade</a></li>
+                                <li><a class="dropdown-item" href="./servicios.html">Reparación</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Sobre Nosotros (activo) -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        
+                        <!-- Contacto -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="./servicios.html">Servicios <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">Mantenimiento</a></li>
-                        <li><a href="#">Upgrade</a></li>
-                        <li><a href="#">Reparación</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item"><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
-                <li class="menu-item"><a href="./contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </section>
         </nav>
     </header>
     <main>
@@ -62,7 +104,7 @@
     </main>
     
     <footer class="pie-pagina">
-        <div class="contenedor-footer">
+        <section class="contenedor-footer">
             <div class="info-footer">
                 <h4>Contacto</h4>
                 <p><strong>Email:</strong> Santillanenzo@gmail.com</p>
@@ -73,8 +115,9 @@
             <div class="enlaces-footer">
                 <h4>Enlaces Rápidos</h4>
                 <ul>
-                    <li><a href="./productos.html">Productos</a></li>
-                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./Productos.html">Productos</a></li>
+                    <li><a href="./Servicios.html">Servicios</a></li>
                     <li><a href="./Sobre-nosotros.html">Sobre Nosotros</a></li>
                     <li><a href="./Contacto.html">Contacto</a></li>
                 </ul>
@@ -83,7 +126,7 @@
                 <i class="fa-brands fa-whatsapp"></i>
                 <i class="fa-brands fa-x-twitter"></i>
             </div>
-        </div>
+        </section>
         <div class="derechos">
             <p>&copy; 2025 CoguiHard. Todos los derechos reservados.</p>
         </div>

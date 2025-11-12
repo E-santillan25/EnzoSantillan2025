@@ -1,55 +1,110 @@
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoguiHard - Soluciones Tecnológicas</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <!-- Contiene todo el contenido visible de la página web -->
+
 <body>
+    <!-- Header con Bootstrap -->
     <header class="encabezado">
-        <div class="contenedor-logo">
-            <img src="assets/img/logo.png" alt="Logo CoguiHard">
-        </div>
-        <nav class="navegacion-principal">
-            <ul class="menu-principal">
-                <li class="menu-item">
-                    <a href="pages/productos.html">Productos <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">Procesadores</a></li>
-                        <li><a href="#">Placas de video</a></li>
-                        <li><a href="#">Mothers</a></li>
-                        <li><a href="#">Periféricos</a></li>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <div class="contenedor-logo">
+                        <img src="assets/img/logo.png" alt="Logo CoguiHard" />
+                    </div>
+                </a>
+
+                <!--Botón hamburguesa-->
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <!-- Productos con dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./pages/productos.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Productos <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./pages/productos.html">Procesadores</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/productos.html">Placas de video</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/productos.html">Mothers</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/productos.html">Periféricos</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Servicios con dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./pages/servicios.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Servicios <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./pages/servicios.html">Mantenimiento</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/servicios.html">Upgrade</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/servicios.html">Reparación</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Sobre Nosotros -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+
+                        <!-- Contacto -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="pages/servicios.html">Servicios <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">Mantenimiento</a></li>
-                        <li><a href="#">Upgrade</a></li>
-                        <li><a href="#">Reparación</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item"><a href="pages/sobre-nosotros.html">Sobre Nosotros</a></li>
-                <li class="menu-item"><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
-
-<!-- Representa el contenido principal del documento -->
+    <!-- Representa el contenido principal del documento -->
 
     <main>
         <section class="titulo">
             <h1>NUESTRAS OFERTAS DISPONIBLES</h1>
-            <p class="subtitulo">Componentes de alta gama y servicios especializados para gamers y profesionales</p>
+            <p class="subtitulo">
+                Componentes de alta gama y servicios especializados para gamers y
+                profesionales
+            </p>
         </section>
 
         <section class="ofertas-destacadas">
@@ -57,23 +112,29 @@
             <div class="contenedor-ofertas">
                 <div class="producto">
                     <h3>RTX 4060 - Placa de Video</h3>
-                    <img src="assets/img/placa-4060-prueba.jpg" alt="RTX 4060">
+                    <img src="assets/img/placa-4060-prueba.jpg" alt="RTX 4060" />
                     <span class="precio">$999,999</span>
-                    <button class="btn-comprar"><a href="pages/Productos.html">Ver más</a></button>
+                    <button class="btn-comprar">
+                        <a href="pages/Productos.html">Ver más</a>
+                    </button>
                 </div>
 
                 <div class="producto">
-                    <h3>Ryzen 7 - Procesador</h3>
-                    <img src="assets/img/ryzen7-procesador-img2.webp" alt="Procesador Ryzen 7">
+                    <h3>Procesador - Ryzen7</h3>
+                    <img src="assets/img/ryzen7-procesador-img2.webp" alt="Procesador Ryzen 7" />
                     <span class="precio">$499,999</span>
-                    <button class="btn-comprar"><a href="pages/Productos.html">Ver más</a></button>
+                    <button class="btn-comprar">
+                        <a href="pages/Productos.html">Ver más</a>
+                    </button>
                 </div>
 
                 <div class="producto">
                     <h3>RTX 5070 - Placa de Video</h3>
-                    <img src="./assets/img/placa-5070-prueba.jpg" alt="RTX 5070">
+                    <img src="./assets/img/placa-5070-prueba.jpg" alt="RTX 5070" />
                     <span class="precio">$2,000,000</span>
-                    <button class="btn-comprar"><a href="pages/Productos.html">Ver más</a></button>
+                    <button class="btn-comprar">
+                        <a href="pages/Productos.html">Ver más</a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -83,26 +144,38 @@
             <div class="contenedor-categorias">
                 <div class="categoria">
                     <a href="pages/Productos.html">Procesadores</a>
-                    <p>Descripción del procesador, velocidades, núcleos, compatibilidad...</p>
-                    <img src="./assets/img/PROCESADORES-PRODUCTO.jpg" alt="PROCESADORES">
+                    <p>
+                        Descripción del procesador, velocidades, núcleos,
+                        compatibilidad...
+                    </p>
+                    <img src="./assets/img/PROCESADORES-PRODUCTO.jpg" alt="PROCESADORES" />
                 </div>
-                
+
                 <div class="categoria">
                     <a href="pages/Productos.html">Placas de Video</a>
-                    <p>Descripción de nuestras placas de video, velocidades, núcleos, compatibilidad...</p>
-                    <img src="./assets/img/placas-devideo.webp" alt="PLACAS DE VIDEO">
+                    <p>
+                        Descripción de nuestras placas de video, velocidades, núcleos,
+                        compatibilidad...
+                    </p>
+                    <img src="./assets/img/placas-devideo.webp" alt="PLACAS DE VIDEO" />
                 </div>
-                
+
                 <div class="categoria">
                     <a href="pages/Productos.html">Mothers</a>
-                    <p>Descripción del procesador, velocidades, núcleos, compatibilidad...</p>
-                    <img src="./assets/img/motherboard-pruductos.jpg" alt="MOTHERS">
+                    <p>
+                        Descripción del procesador, velocidades, núcleos,
+                        compatibilidad...
+                    </p>
+                    <img src="./assets/img/motherboard-pruductos.jpg" alt="MOTHERS" />
                 </div>
-                
+
                 <div class="categoria">
                     <a href="pages/Productos.html">Periféricos</a>
-                    <p>Descripción del procesador, velocidades, núcleos, compatibilidad...</p>
-                    <img src="./assets/img/perifericos.jpg" alt="PERIFERICOS">
+                    <p>
+                        Descripción del procesador, velocidades, núcleos,
+                        compatibilidad...
+                    </p>
+                    <img src="./assets/img/perifericos.jpg" alt="PERIFERICOS" />
                 </div>
             </div>
         </section>
@@ -112,18 +185,26 @@
             <div class="contenedor-servicios">
                 <article class="servicio">
                     <h3>Mantenimiento de Equipos</h3>
-                    <img src="./assets/img/mantenimiento-de-equipos.jpg" alt="Mantenimiento">
-                    <p>Optimizamos y mantenemos tus equipos para garantizar el máximo rendimiento...</p>
+                    <img src="./assets/img/mantenimiento-de-equipos.jpg" alt="Mantenimiento" />
+                    <p>
+                        Optimizamos y mantenemos tus equipos para garantizar el máximo
+                        rendimiento...
+                    </p>
                 </article>
                 <article class="servicio">
                     <h3>Reparación Especializada</h3>
-                    <img src="./assets/img/reparacion-de-pc.jpg" alt="Reparación">
-                    <p>Diagnóstico y reparación de problemas de hardware y software...</p>
+                    <img src="./assets/img/reparacion-de-pc.jpg" alt="Reparación" />
+                    <p>
+                        Diagnóstico y reparación de problemas de hardware y software...
+                    </p>
                 </article>
                 <article class="servicio">
                     <h3>Asesoramiento Técnico</h3>
-                    <img src="./assets/img/asesoramiento-tecnico.jpg" alt="Asesoramiento">
-                    <p>Te ayudamos a elegir los componentes ideales para tus necesidades...</p>
+                    <img src="./assets/img/asesoramiento-tecnico.jpg" alt="Asesoramiento" />
+                    <p>
+                        Te ayudamos a elegir los componentes ideales para tus
+                        necesidades...
+                    </p>
                 </article>
             </div>
         </section>
@@ -132,12 +213,15 @@
             <h2 class="titulo-seccion">UPGRADE</h2>
             <div class="contenedor-upgrade">
                 <div class="upgrade-info">
-                    <h3>¿Cansado de que se tilden tus partidas? Actualiza tu equipo con nosotros.</h3>
-                    <img src="./assets/img/persona-enojada.webp" alt="Persona frustrada">
+                    <h3>
+                        ¿Cansado de que se tilden tus partidas? Actualiza tu equipo con
+                        nosotros.
+                    </h3>
+                    <img src="./assets/img/persona-enojada.webp" alt="Persona frustrada" />
                     <a href="pages/Servicios.html" class="btn-upgrade">UPGRADEA CON NOSOTROS</a>
                 </div>
                 <div class="upgrade-imagen">
-                    <img src="./assets/img/arma-tu-pc-gamer.png" alt="Upgrade de PC">
+                    <img src="./assets/img/arma-tu-pc-gamer.png" alt="Upgrade de PC" />
                 </div>
             </div>
         </section>
@@ -146,14 +230,24 @@
             <h2 class="titulo-seccion">SOBRE NOSOTROS</h2>
             <div class="contenedor-sobre-nosotros">
                 <div class="info-nosotros">
-                    <p>En CoguiHard nos especializamos en ofrecer soluciones tecnológicas de alto rendimiento para gamers, creadores de contenido y profesionales. Con años de experiencia en el sector, nuestro equipo está comprometido con brindar el mejor servicio y asesoramiento personalizado.</p>
-                    <p>Nuestra misión es potenciar tu experiencia digital mediante componentes de calidad y servicios especializados que se adapten a tus necesidades específicas.</p>
+                    <p>
+                        En CoguiHard nos especializamos en ofrecer soluciones tecnológicas
+                        de alto rendimiento para gamers, creadores de contenido y
+                        profesionales. Con años de experiencia en el sector, nuestro
+                        equipo está comprometido con brindar el mejor servicio y
+                        asesoramiento personalizado.
+                    </p>
+                    <p>
+                        Nuestra misión es potenciar tu experiencia digital mediante
+                        componentes de calidad y servicios especializados que se adapten a
+                        tus necesidades específicas.
+                    </p>
                 </div>
                 <div class="mapa">
-                    <img src="./assets/img/mapa-prueba.jpg" alt="Ubicación">
+                    <img src="./assets/img/mapa-prueba.jpg" alt="Ubicación" />
                 </div>
             </div>
-            
+
             <div class="informacion-contacto">
                 <h3>Información de Contacto</h3>
                 <div class="contacto-detalles">
@@ -165,9 +259,9 @@
             </div>
         </section>
     </main>
-    
+
     <footer class="pie-pagina">
-        <div class="contenedor-footer">
+        <section class="contenedor-footer">
             <div class="info-footer">
                 <h4>Contacto</h4>
                 <p><strong>Email:</strong> Santillanenzo@gmail.com</p>
@@ -178,21 +272,24 @@
             <div class="enlaces-footer">
                 <h4>Enlaces Rápidos</h4>
                 <ul>
-                    <li><a href="pages/Productos.html">Productos</a></li>
-                    <li><a href="pages/Servicios.html">Servicios</a></li>
-                    <li><a href="pages/Sobre-nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="pages/Contacto.html">Contacto</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./Productos.html">Productos</a></li>
+                    <li><a href="./Servicios.html">Servicios</a></li>
+                    <li><a href="./Sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./Contacto.html">Contacto</a></li>
                 </ul>
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-whatsapp"></i>
                 <i class="fa-brands fa-x-twitter"></i>
             </div>
-        </div>
+        </section>
         <div class="derechos">
             <p>&copy; 2025 CoguiHard. Todos los derechos reservados.</p>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
